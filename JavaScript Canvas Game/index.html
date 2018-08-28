@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title>Match-In-A-Row - JavaScript</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body onload="setBgImage()">
+
+<canvas id="canvas" width="600" height="700"></canvas>
+
+<img id="bgImage" src="background.png" style="display: none;">
+
+<img id="orange" src="orange.png" style="display: none;">
+<img id="red" src="red.png" style="display: none;">
+<img id="blue" src="blue.png" style="display: none;">
+<img id="green" src="green.png" style="display: none;">
+<img id="grey" src="grey.png" style="display: none;">
+<img id="purple" src="purple.png" style="display: none;">
+
+<!-- <button type="button" id="startBtn" onclick="initialize()">START</button> -->
+<img id="basicBtn" class="btn" src="buttons/basicBtn.png" onclick="setJS('basicGame.js')">
+<img id="timeBtn" class="btn" src="buttons/timeBtn.png" onclick="setJS('timeTrial.js')">
+<img id="tryAgainBtn" class="btn" src="buttons/tryAgainBtn.png" onclick="location.href='index.html'">
+
+<audio src="sound/sound.wav" id="sound"></audio>
+<audio src="sound/Bit Quest.mp3" id="bgm"></audio>
+
+<script>	
+	var ctx, balls = [], moves = [];//arrays for balls
+	var timer;
+	var moveCount = 0;//pt6
+	var timeCount = 0;//pt11
+	var score = 0;//pt7
+	var mouseDownX = null, mouseDownY = null;
+	var imageList = [orange, red, blue, green, grey, purple];
+	var tryAgainBtn = document.getElementById('tryAgainBtn');
+	var sound = document.getElementById('sound');//pt8
+	var bgm = document.getElementById('bgm');//pt8 background music
+	//Initialize canvas moved @ pt 9
+	var canvas = document.getElementById("canvas");
+	ctx = canvas.getContext("2d");
+
+	//pt9
+	function setBgImage() {
+		ctx.drawImage(bgImage, 0, 0);
+	}
+
+	function setJS(fileName){
+		var elm = document.createElement('script');
+		elm.type = 'text/javascript';
+		elm.src = fileName;
+		document.body.appendChild(elm);
+
+		setTimeout(function() {
+			document.getElementById('basicBtn').style.display = 'none';
+			document.getElementById('timeBtn').style.display = 'none';
+			initialize();
+		}, 200);
+	}
+
+
+
+</script>
+
+<script type="text/javascript" src="common.js"></script>
+</body>
+</html>

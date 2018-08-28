@@ -1,0 +1,29 @@
+@charset "utf-8";
+
+#canvas {
+	margin:30px;
+	border: 1px solid black;
+}
+/*#startBtn {
+	position: absolute;
+	top: 400px;
+	left: 250px;
+	width: 200px;
+	height: 50px;
+	font-size: 20px;
+}*/
+
+.btn {
+	position: absolute;
+	left: 250px;
+}
+#basicBtn {
+	top: 400px;
+}
+#timeBtn {
+	top: 500px;
+}
+#tryAgainBtn {
+	top: 400px;
+	display: none;
+}
