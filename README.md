@@ -5,6 +5,9 @@ This game utilizes a canvas that is initialized to show a randomized board of co
 
 Starting screen:
 
+<img width="605" alt="starting screen" src="https://user-images.githubusercontent.com/18220743/44701234-9b029000-aa42-11e8-8f42-6b87eebef0f6.png">
+
+
 Basic Game:
 
 Time Trial:
